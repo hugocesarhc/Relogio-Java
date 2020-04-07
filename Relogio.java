@@ -17,7 +17,7 @@ public class Relogio {
 			this.minuto = minuto;
 			this.segundo = segundo;
 		}else {
-			System.out.println("Dados inválidos");
+			System.out.println("Dados invÃ¡lidos");
 		}
 	}
 	public String getHora() {
@@ -28,18 +28,21 @@ public class Relogio {
 		System.out.println(this.getHora());
 	}
 	
-	public void pulso() {
-		segundo++;
-		if(segundo > 59) {
-			segundo = 0;
-			minuto++;
+	while (pulso==pulso) {
+		public void pulso() {
+			segundo++;
+			if(segundo > 59) {
+				segundo = 0;
+				minuto++;
+			}
+			if (minuto > 59) {
+				minuto = 0;
+				hora++;
+			}
+			if (hora > 23) {
+				hora = 0;
+			}
 		}
-		if (minuto > 59) {
-			minuto = 0;
-			hora++;
-		}
-		if (hora > 23) {
-			hora = 0;
-		}
+	System.out.println (pulso);
 	}
 }
