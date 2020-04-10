@@ -28,21 +28,33 @@ public class Relogio {
 		System.out.println(this.getHora());
 	}
 	
-	while (pulso==pulso) {
-		public void pulso() {
-			segundo++;
-			if(segundo > 59) {
-				segundo = 0;
-				minuto++;
+	public void pulso() {
+	    while (true) {
+	        segundo++;
+	        if(segundo > 59) {
+	            segundo = 0;
+	            minuto++;
+	            
+	        }
+	        if (minuto > 59) {
+	            minuto = 0;
+	            hora++;
+	        }
+	        if (hora > 23) {
+	            hora = 0;
+	        }
+	        Thread.currentThread();
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-			if (minuto > 59) {
-				minuto = 0;
-				hora++;
-			}
-			if (hora > 23) {
-				hora = 0;
-			}
-		}
-	System.out.println (pulso);
+	        this.showHora();
+	    }
+	    
+		
 	}
 }
+
+
